@@ -13,7 +13,7 @@ from helpers.network import configure_network, create_channels, print_network_st
 from qci_client import QciClient
 
 
-token = "XXX" #Introduce tu token
+token = "356d1541cd56e32fda0bbdcffa7b1157"
 api_url = "https://api.qci-prod.com"
 qclient = QciClient(api_token=token, url=api_url)
 
@@ -50,11 +50,10 @@ def qci_solver(Q, runs,transmitted_symbols):
     labels = np.array(ising_solution)  # array 2D
     if runs == 1:
         accuracy = 100 * np.mean(pred == labels[i].flatten())
-	print(accuracy)
+
 
     for i in range(runs):
         accuracy = 100 * np.mean(pred == labels[i].flatten())
-	print(accuracy)
         results.append(accuracy)
 
     return results
