@@ -13,7 +13,7 @@ from helpers.network import configure_network, create_channels, print_network_st
 from qci_client import QciClient
 
 
-token = "356d1541cd56e32fda0bbdcffa7b1157"
+token = "XXX" #Introduce tu token
 api_url = "https://api.qci-prod.com"
 qclient = QciClient(api_token=token, url=api_url)
 
